@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  web:
+    image: nginx
+    volumes:
+      - /var/snap/docker/common/var-lib-nginx:/etc/nginx/templates
+    ports:
+      - "9090:80"
+    environment:
+      - NGINX_HOST=designo.com
+      - NGINX_PORT=80
